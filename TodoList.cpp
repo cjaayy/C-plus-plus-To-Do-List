@@ -13,13 +13,13 @@ int main() {
     vector<Task> tasks;
 
     while (true) {
-        cout << "To-Do List:" << std::endl;
+        cout << "To Do List:" << std::endl;
         for (size_t i = 0; i < tasks.size(); ++i) {
            cout << i + 1 << ". " << tasks[i].description;
             if (tasks[i].completed) {
                cout << " (Completed)";
             }
-            std::cout << std::endl;
+            cout << endl;
         }
 
        cout << "\nOptions:\n";
@@ -35,7 +35,7 @@ int main() {
             Task newTask;
             cout << "Enter task description: ";
             cin.ignore();  // Clear the input buffer
-            getline(std::cin, newTask.description);
+            getline(cin, newTask.description);
             newTask.completed = false;
             tasks.push_back(newTask);
         } else if (choice == 2) {
